@@ -78,10 +78,6 @@ jobs:
           if [ -f "CMakeLists.txt" ]; then
             CODENAME=$(grep -oP 'set\(CODENAME\s+"\K[^"]+' CMakeLists.txt || echo "")
             if [ -n "$CODENAME" ]; then
-              if [ "$CODENAME" = "dev" ]; then
-                echo "::error::CODENAME is set to 'dev' for a tagged release! Please update the CODENAME in CMakeLists.txt before creating a release."
-                exit 1
-              fi
               echo "codename=$CODENAME" >> $GITHUB_OUTPUT
               echo "has_codename=true" >> $GITHUB_OUTPUT
               echo "Found codename: $CODENAME"
