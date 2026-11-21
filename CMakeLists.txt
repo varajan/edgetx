@@ -5,7 +5,7 @@ project(EdgeTX)
 set(VERSION_MAJOR "3")
 set(VERSION_MINOR "1")
 set(VERSION_REVISION "0")
-set(CODENAME "dev")
+set(CODENAME "beta-release")
 string(TIMESTAMP BUILD_YEAR "%Y")
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
